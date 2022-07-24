@@ -1,0 +1,26 @@
+{
+  "name": "kickstart-campaign",
+  "version": "1.0.0",
+  "description": "kickstart-campaign is a Blockchain Project Developed using Etherium and Solidity Language for Investors wants to invest in Start up Campaigns",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashwanipatel/kickstart-campaign.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashwanipatel/kickstart-campaign/issues"
+  },
+  "homepage": "https://github.com/ashwanipatel/kickstart-campaign#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0",
+    "ganache-cli": "^6.12.2",
+    "mocha": "^10.0.0",
+    "solc": "^0.4.26",
+    "web3": "^1.7.4"
+  }
+}

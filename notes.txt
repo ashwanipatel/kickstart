@@ -1,0 +1,11 @@
+//setup commands
+npm init // for setting up the project, not required if cloning
+npm install
+npm install --save ganache-cli mocha solc@0.4.17 fs-extra web3
+
+
+//compiling the source code and getting the compiled code in build directory
+node compile.js 
+
+//testing the mocha test cases
+npm run test
