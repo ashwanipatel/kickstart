@@ -11,7 +11,7 @@ contract CampaignFactory{
     function getDeployedCampaigns() public view returns (address[]){
         return deployedCampaigns;
     }
-}
+}   
 
 contract Campaign{
 
@@ -35,7 +35,7 @@ contract Campaign{
         _;
     }
 
-    constructor(uint minimum, address creator) public {
+    constructor ( uint minimum, address creator) public {
         manager = creator;
         minimumContribution = minimum;
     }
@@ -72,9 +72,25 @@ contract Campaign{
         Request storage request = requests[index];
         require(!request.complete);
         require(request.approvalCount > (approvarsCount/2));
-        
+
         request.recipient.transfer(request.value);
         request.complete = true;
+    }
+
+    function getSummary() public view returns (
+        uint, uint, uint,uint,address
+    ) {
+        return (
+            minimumContribution,
+            this.balance,
+            requests.length,
+            approvarsCount,
+            manager
+        );
+    }
+
+    function getRequestsCount() public view returns (uint){
+        return requests.length;
     }
 
 }

@@ -9,3 +9,6 @@ node compile.js
 
 //testing the mocha test cases
 npm run test
+
+installing next routes for dynamic routing 
+npm install next-routes --save --legacy-peer-deps
